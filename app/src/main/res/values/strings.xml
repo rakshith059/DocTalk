@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DocTalk</string>
+    <string name="search">SEARCH</string>
+    <string name="hint_enter_name">Please enter name</string>
+</resources>
