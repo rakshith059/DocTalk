@@ -79,7 +79,6 @@ class MainActivity : AppCompatActivity() {
                         activity_main_ll_progress_bar?.visibility = View.GONE
 
                         var gitResponse: GitResponse? = gson?.fromJson(response.toString(), GitResponse::class.java)
-                        Log.d("Rakshith", "response is " + gitResponse?.items?.size)
 
                         if (gitResponse?.items?.size as Int > 0) {
                             activity_main_rv_search_list?.visibility = View.VISIBLE
