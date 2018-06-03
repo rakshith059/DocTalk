@@ -40,4 +40,9 @@ dependencies {
     implementation "android.arch.paging:runtime:" + paging_version
     //for design support
     implementation 'com.android.support:design:' + support_version
+    //dependency for gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //dependency for rxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.1.6"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }

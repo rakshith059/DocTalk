@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/size_8dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,24 +24,40 @@
                 android:id="@+id/activity_main_tet_enter_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_enter_name" />
+                android:hint="@string/hint_enter_name"
+                android:inputType="textPersonName" />
 
         </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:id="@+id/activity_main_btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search" />
-
     </LinearLayout>
-
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_main_rv_search_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8dp"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/activity_main_ll_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_main_tv_no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:visibility="gone" />
 
 </LinearLayout>
