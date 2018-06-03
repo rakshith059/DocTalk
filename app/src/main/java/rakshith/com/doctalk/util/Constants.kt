@@ -10,5 +10,7 @@ class Constants {
         val gitHubSearchUrl = githubBaseUrl + "search/"
         val gitHubSearchUserUrl = gitHubSearchUrl + "users"
         val SEARCH_PARAM_KEY: String = "q"
+        val SEARCH_SORT_KEY: String = "sort"
+        val SEARCH_FOLLOWERS: String = "followers"
     }
 }

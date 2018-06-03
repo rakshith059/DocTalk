@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         gsonBuilder.setDateFormat("M/d/yy hh:mm a")
         gson = gsonBuilder?.create()
 
-        var searchTerm = activity_main_tet_enter_name?.text.toString()
-
         Observable.create(object : ObservableOnSubscribe<String> {
             override fun subscribe(e: ObservableEmitter<String>) {
                 activity_main_tet_enter_name?.addTextChangedListener(object : TextWatcher {
@@ -69,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         var headerMap = HashMap<String, String>()
         var paramsMap = HashMap<String, String>()
         paramsMap.put(Constants.SEARCH_PARAM_KEY, searchTerm)
+        paramsMap.put(Constants.SEARCH_SORT_KEY, Constants.SEARCH_FOLLOWERS)
 
         NetworkVolleyRequest(NetworkVolleyRequest.RequestMethod.GET,
                 Constants.gitHubSearchUserUrl,
