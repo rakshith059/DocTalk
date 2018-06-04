@@ -1,6 +1,5 @@
-package rakshith.com.doctalk.models
+package rakshith.com.doctalk.services.models
 
-import android.content.ClipData.Item
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

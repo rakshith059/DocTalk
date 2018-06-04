@@ -1,4 +1,4 @@
-package rakshith.com.doctalk.adapters
+package rakshith.com.doctalk.view.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import rakshith.com.doctalk.R
-import rakshith.com.doctalk.models.GitResponse
+import rakshith.com.doctalk.services.models.GitResponse
 
 /**
  * Created DocTalk by rakshith on 6/3/18.

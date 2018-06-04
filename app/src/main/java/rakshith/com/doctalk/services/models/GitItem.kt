@@ -1,4 +1,4 @@
-package rakshith.com.doctalk.models
+package rakshith.com.doctalk.services.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
