@@ -1,17 +1,30 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+
+// Manifest version information!
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 android {
     compileSdkVersion 27
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize = "4g"
+    }
+
     defaultConfig {
         applicationId "rakshith.com.doctalk"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,6 +38,8 @@ android {
 dependencies {
     def paging_version = "1.0.0-alpha6"
     def support_version = "27.1.1"
+    def lifecycle_version = "1.1.0"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -40,4 +55,12 @@ dependencies {
     implementation "android.arch.paging:runtime:" + paging_version
     //for design support
     implementation 'com.android.support:design:' + support_version
+    //dependency for gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //dependency for rxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.1.10"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    //Architecture Components
+    implementation "android.arch.lifecycle:extensions:" + lifecycle_version
 }

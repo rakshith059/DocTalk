@@ -2,4 +2,7 @@
     <string name="app_name">DocTalk</string>
     <string name="search">SEARCH</string>
     <string name="hint_enter_name">Please enter name</string>
+    <string name="name">Name :</string>
+    <string name="score">Score :</string>
+    <string name="no_data_found">No data found!! Please search for other name..</string>
 </resources>
